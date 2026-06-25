@@ -1,1 +1,83 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eric Vernon | PhD Student & Engineer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+        /* 1. The Two-Column Layout */
+        .profile-layout {
+            display: flex;          /* Turns this container into a flexible row */
+            gap: 2rem;              /* Automatically puts a 2-rem gap between the columns */
+            align-items: center;    /* Vertically centers the text with the image */
+        }
+
+        .fixed-avatar {
+            width: 120px;           /* Locks the width */
+            height: 150px;          /* Locks the height */
+            object-fit: cover;      /* Prevents the image from stretching/squishing if it isn't perfectly square */
+            background-color: #eee; /* Provides a gray placeholder box if the image fails to load */
+        }
+        /* Shrink the H2s inside the main section */
+        main h2 {
+            font-size: 1.25rem;       /* Makes it visually closer to an h4 or h5 */
+            margin-bottom: 0.5rem;    /* Tightens the gap between the header and paragraph */
+        }
+        /* Force Pico's buttons to be a normal, compact size */
+        .button-group a[role="button"] {
+            padding: 0.5rem 1rem;      /* Shrinks the massive top/bottom and left/right space */
+            font-size: 0.875rem;       /* Drops the text size down a notch */
+        }
+        .image-column {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container">
+        <a href="index_j.html">日本語</a>
+    </nav>
+<header class="profile-layout container">
+    
+    <div class="image-column">
+        <img src="profile.jpg" alt="Profile Picture" class="fixed-avatar">
+    </div>
+
+    <div class="text-column">
+        <h1>Eric Vernon</h1>
+        <p>PhD Student & Software Engineer<br>Osaka Metropolitan University</p>
+        <p>I am a doctorate student based in Osaka, Japan, with around 7 years industry experience working in software engineering. My current research centers around explainable artificial intelligence.</p>
+        <div class="button-group">
+            <a href="resume.pdf"role="button">Resume</a>
+        </div>
+    </div>
+
+</header>
+<main class="container">
+    <section>
+        <h2>Development</h2>
+        <p>
+            I worked full-time in various engineering roles from 2013-2020. My previous roles include infrastructure engineering, full stack engineering, and test engineering.
+            Most recently, I worked at MUFG Americas as a member of the cloud engineering team, where we developed the landing zone to allow MUFG to begin their cloud transition.
+            Before that, I worked at Datto, Inc. as a full stack engineer, where I was mostly focused on developing REST APIs to support remote device management.
+        </p>
+    </section>
+    <section>
+        <h2>Research</h2>
+        <p>
+            I am a doctoral student at Osaka Metropolitan University (previously known as Osaka Prefecture University) within the Graduate School of Informatics.
+            I completed my Master's Degree in Spring 2022, and plan to defend my doctoral thesis in Spring 2027.
+        </p>
+        <p>
+            My main research interest is explainable artificial intelligence. Currently, I am active in a small subfield called "partial interpretability",
+            which tries to combine inherently interpretable methods (glass box models, e.g.) with black box methods in order to balance performance with explainability.
+        </p>
+    </section>
+    <section>
+        <h2>Hobbies</h2>
+        <p>I love music, and am an amateur pianist. I have taken lessons consistently since December 2016, although I don't always find as much time to practice as I would like!</p>
+        <p>Over the last few years, I have also gained an interest in both weightlifting and general fitness.</p>  
+    </section>
+</main>
+</body>
+</html>
